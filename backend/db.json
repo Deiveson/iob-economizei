@@ -1,0 +1,35 @@
+{
+  "extract": [
+    {
+      "id": 1,
+      "date": "2023-12-11",
+      "description": "Conta de água",
+      "value": 45,
+      "type": 2
+    },
+    {
+      "id": 1,
+      "date": "2023-12-11",
+      "description": "Conta de luz",
+      "value": 200,
+      "type": 2
+    },
+    {
+      "id": 1,
+      "date": "2023-12-11",
+      "description": "Gás de cozinha",
+      "value": 95,
+      "type": 2
+    },
+  ],
+  "types": [
+    {
+      "id": 1,
+      "nome": "gain"
+    },
+    {
+      "id": 2,
+      "nome": "spent"
+    }
+  ]
+}
