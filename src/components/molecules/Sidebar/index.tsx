@@ -9,9 +9,9 @@ const Sidebar = () => {
 		<SidebarContainer>
 			<SidebarLogo src={logo} />
 			<SidebarItems>
-				<SidebarItem icon={<FaChartBar size="20px" />} description="Início" uri={URIs.Dashboard}/>
-				<SidebarItem icon={<FaPlus size="20px" />} description="Registrar transação" uri={URIs.ExpensesGains}/>
-				<SidebarItem icon={<FaFileInvoiceDollar size="20px" />} description="Extrato" uri={URIs.Transactions}/>
+				<SidebarItem active={true} Icon={FaChartBar} description="Início" uri={URIs.Dashboard}/>
+				<SidebarItem active={false} Icon={FaPlus} description="Registrar transação" uri={URIs.ExpensesGains}/>
+				<SidebarItem active={false} Icon={FaFileInvoiceDollar} description="Extrato" uri={URIs.Transactions}/>
 			</SidebarItems>
 		</SidebarContainer>
 	)

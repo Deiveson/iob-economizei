@@ -5,31 +5,21 @@
       "date": "2023-12-11",
       "description": "Conta de água",
       "value": 45,
-      "type": 2
+      "type": "spent"
     },
     {
       "id": 2,
       "date": "2023-12-11",
       "description": "Conta de luz",
       "value": 200,
-      "type": 2
+      "type": "spent"
     },
     {
       "id": 3,
       "date": "2023-12-11",
       "description": "Gás de cozinha",
       "value": 95,
-      "type": 2
-    }
-  ],
-  "types": [
-    {
-      "id": 1,
-      "value": "gain"
-    },
-    {
-      "id": 2,
-      "value": "spent"
+      "type": "spent"
     }
   ]
 }

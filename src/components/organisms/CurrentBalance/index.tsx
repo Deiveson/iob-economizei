@@ -3,10 +3,13 @@ import {
     CurrentBalanceHeader,
     CurrentBalanceTitle,
     CurrentBalanceValue,
+    CurrentBalanceValueDetails,
     CurrentBalanceValueViewers
 } from "./current-balance.styles";
-import {FaLandmark} from "react-icons/fa6";
-import {ValueViewer} from "components/Molecules/ValueViewer";
+import {FaChevronRight, FaLandmark} from "react-icons/fa6";
+import {ValueViewer} from "components/molecules/ValueViewer";
+import {URIs} from "router/URIs";
+import {Link} from "react-router-dom";
 
 export const CurrentBalance = () => {
     return (
@@ -20,6 +23,9 @@ export const CurrentBalance = () => {
                 <ValueViewer value={2000} description='Ganhos do mês' />
                 <ValueViewer value={1000} description='Gastos do mês' negative />
             </CurrentBalanceValueViewers>
+            <CurrentBalanceValueDetails>
+                <Link to={URIs.Transactions}> Detalhes <FaChevronRight /></Link>
+            </CurrentBalanceValueDetails>
         </CurrentBalanceContainer>
     )
 }

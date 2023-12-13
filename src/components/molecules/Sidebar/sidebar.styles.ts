@@ -25,16 +25,18 @@ export const SidebarItemContainer = styled.li`
     grid-template-columns: 60px 1fr;
     padding: 24px 0;
     cursor: pointer;
-    p {
-      font-size: 16px;
-      font-weight: 500;
-    }
-    span {
-      margin-right: 38px;
-    }
     &:hover{
       p {
         color: ${props => props.theme.palette.primary.main};
       }
     }
+`
+
+export const SidebarItemIcon = styled.span`
+    margin-right: 38px;
+`
+export const SidebarItemDescription = styled.p<{ active: boolean }>`
+    font-size: 16px;
+    font-weight: 500;
+    color: ${props => props.active?props.theme.palette.primary.main:'#000'};
 `

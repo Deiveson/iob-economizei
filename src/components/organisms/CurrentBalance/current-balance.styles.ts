@@ -23,6 +23,21 @@ export const CurrentBalanceValue = styled(CurrentBalanceTitle)`
 export const CurrentBalanceValueViewers = styled.div`
     display: flex;
     gap: 8px;
-  margin-top: 24px;
+    margin-top: 24px;
+`
+export const CurrentBalanceValueDetails = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 24px 0 16px 0;
+    a {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      text-decoration: none;
+      font-size: 16px;
+      color: #fff;
+      font-weight: 600;
+    }
 `
 

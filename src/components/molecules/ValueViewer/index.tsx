@@ -5,7 +5,7 @@ import {IValueViewerProps} from "./interfaces/IValueViewerProps";
 import {
     ValueViewerContainer, ValueViewerCurrency, ValueViewerDescription, ValueViewerIcon
 } from "./value-viewer.styles";
-import {themeAttributes} from "../../../theme/themeAttributes";
+import {themeAttributes} from "theme/themeAttributes";
 
 
 export const ValueViewer: FunctionComponent<IValueViewerProps> = ({value, description, negative = false}) => {
