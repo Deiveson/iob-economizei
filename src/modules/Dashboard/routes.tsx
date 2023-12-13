@@ -1,14 +1,14 @@
 import { IRoutes } from '../../router/types'
 import { lazy } from 'react'
 
-const Login = lazy(() => import('../Auth/pages/Login'))
+const Dashboard = lazy(() => import('../Dashboard/pages/Dashboard'))
 
 const LoginRoutes: IRoutes = [
 	{
-		name: 'Login',
+		name: 'Dashboard',
 		routeProps: {
-			element: <Login />,
-			path: '/login',
+			element: <Dashboard />,
+			path: '/',
 		},
 	},
 ]
