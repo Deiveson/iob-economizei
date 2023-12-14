@@ -1,4 +1,6 @@
 export { ExtractContext } from './ExtractContext'
 export { ExtractProvider } from './ExtractProvider'
-export type { IExtractContext, IExtractItem } from './interfaces/IExtractContext'
+export type { IExtractContext } from './interfaces/IExtractContext'
+export type { IExtractItem } from './interfaces/IExtractItem'
 export { useExtractContext } from './useExtractContext'
+export { ExtractItemType } from './extract.enums'

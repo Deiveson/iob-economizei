@@ -7,5 +7,5 @@ export const CODE: Record<string, string> = {
     CN: 'CNY',
     JP: 'JPY',
     US: 'USD',
-    KW: 'KWD'
-};
+    KW: 'KWD',
+}

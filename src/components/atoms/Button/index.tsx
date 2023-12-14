@@ -1,9 +1,9 @@
-import {FunctionComponent} from "react";
+import { FunctionComponent } from 'react'
 
 interface IButtonProps {
     value: string
 }
 
-export const Button: FunctionComponent<IButtonProps> =() => {
-return(<button />)
+export const Button: FunctionComponent<IButtonProps> = () => {
+    return <button />
 }

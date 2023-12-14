@@ -1,25 +1,25 @@
 {
-  "extract": [
-    {
-      "id": 1,
-      "date": "2023-12-11",
-      "description": "Conta de água",
-      "value": 45,
-      "type": "spent"
-    },
-    {
-      "id": 2,
-      "date": "2023-12-11",
-      "description": "Conta de luz",
-      "value": 200,
-      "type": "spent"
-    },
-    {
-      "id": 3,
-      "date": "2023-12-11",
-      "description": "Gás de cozinha",
-      "value": 95,
-      "type": "spent"
-    }
-  ]
+    "extract": [
+        {
+            "id": 1,
+            "date": "2023-12-11",
+            "description": "Conta de água",
+            "value": 45,
+            "type": "SPENT"
+        },
+        {
+            "id": 2,
+            "date": "2023-12-11",
+            "description": "Conta de luz",
+            "value": 200,
+            "type": "SPENT"
+        },
+        {
+            "id": 3,
+            "date": "2023-12-11",
+            "description": "Gás de cozinha",
+            "value": 95,
+            "type": "SPENT"
+        }
+    ]
 }

@@ -1,4 +1,4 @@
-import {ElementType} from "react";
+import { ElementType } from 'react'
 
 export interface ISidebarItemProps {
     description: string

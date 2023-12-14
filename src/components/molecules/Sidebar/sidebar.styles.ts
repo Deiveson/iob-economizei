@@ -25,10 +25,10 @@ export const SidebarItemContainer = styled.li`
     grid-template-columns: 60px 1fr;
     padding: 24px 0;
     cursor: pointer;
-    &:hover{
-      p {
-        color: ${props => props.theme.palette.primary.main};
-      }
+    &:hover {
+        p {
+            color: ${props => props.theme.palette.primary.main};
+        }
     }
 `
 
@@ -38,5 +38,5 @@ export const SidebarItemIcon = styled.span`
 export const SidebarItemDescription = styled.p<{ active: boolean }>`
     font-size: 16px;
     font-weight: 500;
-    color: ${props => props.active?props.theme.palette.primary.main:'#000'};
+    color: ${props => (props.active ? props.theme.palette.primary.main : '#000')};
 `

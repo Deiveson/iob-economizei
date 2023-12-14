@@ -1,10 +1,12 @@
-export interface IExtractItem {
-    id: number
-    date: string
-    description: string
-    value: number
-    type: 'spent' | 'gain'
-}
+import { IExtractItem } from './IExtractItem'
+
 export interface IExtractContext {
     extract: Array<IExtractItem>
+    loadingExtract: boolean
+    balance: number
+    gains: number
+    spents: number
+    formattedBalance: string
+    formattedGains: string
+    formattedSpents: string
 }

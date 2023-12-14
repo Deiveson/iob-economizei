@@ -1,19 +1,22 @@
-import {FaChartBar, FaFileInvoiceDollar, FaPlus} from "react-icons/fa6";
-import logo from 'assets/logo.svg';
-import {SidebarContainer, SidebarItems, SidebarLogo} from "./sidebar.styles";
-import SidebarItem from "./SidebarItem";
-import {URIs} from "router/URIs";
+import { FaChartBar, FaFileInvoiceDollar, FaPlus } from 'react-icons/fa6'
+
+import { URIs } from 'router/URIs'
+
+import logo from 'assets/logo.svg'
+
+import { SidebarContainer, SidebarItems, SidebarLogo } from './sidebar.styles'
+import SidebarItem from './SidebarItem'
 
 const Sidebar = () => {
-	return (
-		<SidebarContainer>
-			<SidebarLogo src={logo} />
-			<SidebarItems>
-				<SidebarItem active={true} Icon={FaChartBar} description="Início" uri={URIs.Dashboard}/>
-				<SidebarItem active={false} Icon={FaPlus} description="Registrar transação" uri={URIs.ExpensesGains}/>
-				<SidebarItem active={false} Icon={FaFileInvoiceDollar} description="Extrato" uri={URIs.Transactions}/>
-			</SidebarItems>
-		</SidebarContainer>
-	)
+    return (
+        <SidebarContainer>
+            <SidebarLogo src={logo} />
+            <SidebarItems>
+                <SidebarItem active={true} Icon={FaChartBar} description="Início" uri={URIs.Dashboard} />
+                <SidebarItem active={false} Icon={FaPlus} description="Registrar transação" uri={URIs.ExpensesGains} />
+                <SidebarItem active={false} Icon={FaFileInvoiceDollar} description="Extrato" uri={URIs.Transactions} />
+            </SidebarItems>
+        </SidebarContainer>
+    )
 }
 export default Sidebar

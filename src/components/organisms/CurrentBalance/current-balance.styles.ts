@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const CurrentBalanceContainer = styled.div`
-  width: 100%;
-  padding: 16px;
-  background: ${props => props.theme.palette.primary.main};
-  border-radius: ${props => props.theme.shape.borderRadius};
+    width: 100%;
+    padding: 16px;
+    background: ${props => props.theme.palette.primary.main};
+    border-radius: ${props => props.theme.shape.borderRadius};
 `
 export const CurrentBalanceHeader = styled.p`
     width: 100%;
@@ -31,13 +31,12 @@ export const CurrentBalanceValueDetails = styled.div`
     width: 100%;
     padding: 24px 0 16px 0;
     a {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      text-decoration: none;
-      font-size: 16px;
-      color: #fff;
-      font-weight: 600;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 600;
     }
 `
-

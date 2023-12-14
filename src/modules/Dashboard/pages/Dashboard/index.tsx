@@ -1,14 +1,11 @@
-import * as React from 'react'
+import { CurrentBalance } from 'components/organisms/CurrentBalance'
 
-import {DashboardContainer} from './dashboard.styles'
-import { CurrentBalance } from "components/organisms/CurrentBalance";
-import {useExtractContext} from "context/ExtractContext";
+import { DashboardContainer } from './dashboard.styles'
 
 export default function Dashboard() {
-	const {extract} = useExtractContext()
-	return (
-		<DashboardContainer>
-			<CurrentBalance />
-		</DashboardContainer>
-	)
+    return (
+        <DashboardContainer>
+            <CurrentBalance />
+        </DashboardContainer>
+    )
 }

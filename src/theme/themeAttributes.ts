@@ -15,6 +15,6 @@ export const themeAttributes = {
         },
     },
     shape: {
-        borderRadius: "8px",
+        borderRadius: '8px',
     },
-};
+}
