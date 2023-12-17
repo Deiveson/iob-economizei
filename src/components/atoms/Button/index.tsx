@@ -1,9 +1,8 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent, ButtonHTMLAttributes, PropsWithChildren } from 'react'
 
-interface IButtonProps {
-    value: string
-}
+import { StyledButton } from './button.styles'
 
-export const Button: FunctionComponent<IButtonProps> = () => {
-    return <button />
+//TODO Melhorar esse botão ai
+export const Button: FunctionComponent<PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement>>> = ({ children, ...props }) => {
+    return <StyledButton {...props}>{children}</StyledButton>
 }

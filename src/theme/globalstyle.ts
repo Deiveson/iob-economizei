@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
   
   body {
     font-family: 'Inter', sans-serif;
+    color: rgba(0, 0, 0, 0.87);
   }
   
   //Reset CSS

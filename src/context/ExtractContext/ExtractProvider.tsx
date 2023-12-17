@@ -1,17 +1,27 @@
-import { FunctionComponent, ReactNode } from 'react'
+import { FunctionComponent, PropsWithChildren } from 'react'
 
 import { useCalculateBalance } from './hooks/useCalculateBalance'
-import { useGetExtract } from './hooks/useGetExtract'
+import { useExtract } from './hooks/useExtract'
 
 import { ExtractContext } from '.'
 
-export const ExtractProvider: FunctionComponent<{ children: ReactNode }> = ({ children }) => {
-    const { extract, loadingExtract } = useGetExtract()
-    const { balance, formattedBalance, formattedSpents, spents, gains, formattedGains } = useCalculateBalance(extract)
+export const ExtractProvider: FunctionComponent<PropsWithChildren> = ({ children }) => {
+    const { extract, loadingExtract, setTransaction } = useExtract()
+    const { balance, formattedBalance, formattedExpenses, expenses, gains, formattedGains } = useCalculateBalance(extract)
 
     return (
         <ExtractContext.Provider
-            value={{ extract, loadingExtract, balance, formattedBalance, formattedSpents, spents, gains, formattedGains }}
+            value={{
+                extract,
+                loadingExtract,
+                balance,
+                formattedBalance,
+                formattedExpenses,
+                expenses,
+                gains,
+                formattedGains,
+                setTransaction,
+            }}
         >
             {children}
         </ExtractContext.Provider>

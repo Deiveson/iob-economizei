@@ -1,12 +1,13 @@
-import { IExtractItem } from './IExtractItem'
+import { ITransaction } from './ITransaction'
 
 export interface IExtractContext {
-    extract: Array<IExtractItem>
+    extract: Array<ITransaction>
     loadingExtract: boolean
     balance: number
     gains: number
-    spents: number
+    expenses: number
     formattedBalance: string
     formattedGains: string
-    formattedSpents: string
+    formattedExpenses: string
+    setTransaction(transaction: Omit<ITransaction, 'id'>): Promise<void>
 }

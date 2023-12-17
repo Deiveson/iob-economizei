@@ -16,7 +16,7 @@ import {
 } from './current-balance.styles'
 
 export const CurrentBalance = () => {
-    const { formattedBalance, gains, spents } = useExtractContext()
+    const { formattedBalance, gains, expenses } = useExtractContext()
 
     return (
         <CurrentBalanceContainer>
@@ -27,11 +27,10 @@ export const CurrentBalance = () => {
             <CurrentBalanceValue>{formattedBalance}</CurrentBalanceValue>
             <CurrentBalanceValueViewers>
                 <ValueViewer value={gains} description="Ganhos do mês" />
-                <ValueViewer value={spents} description="Gastos do mês" negative />
+                <ValueViewer value={expenses} description="Gastos do mês" negative />
             </CurrentBalanceValueViewers>
             <CurrentBalanceValueDetails>
                 <Link to={URIs.Transactions}>
-                    {' '}
                     Detalhes <FaChevronRight />
                 </Link>
             </CurrentBalanceValueDetails>

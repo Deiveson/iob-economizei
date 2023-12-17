@@ -1,6 +1,6 @@
 import { ExtractItemType } from '../extract.enums'
 
-export interface IExtractItem {
+export interface ITransaction {
     id: number
     date: string
     description: string

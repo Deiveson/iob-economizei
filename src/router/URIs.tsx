@@ -1,5 +1,5 @@
 export const URIs = {
     Dashboard: '/',
-    ExpensesGains: '/expenses_gains',
+    RegisterTransaction: '/register-transaction',
     Transactions: '/transactions',
 }

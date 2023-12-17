@@ -12,7 +12,7 @@ const SidebarItem: FunctionComponent<ISidebarItemProps> = ({ uri, Icon, descript
     return (
         <SidebarItemContainer onClick={() => navigate(uri)}>
             <SidebarItemIcon>
-                <Icon color={active ? themeAttributes.palette.primary.main : '#000'} size="20px" />
+                <Icon color={active ? themeAttributes.palette.primary.main : themeAttributes.palette.text.main} size="20px" />
             </SidebarItemIcon>
             <SidebarItemDescription active={active}>{description}</SidebarItemDescription>
         </SidebarItemContainer>

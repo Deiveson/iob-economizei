@@ -38,5 +38,5 @@ export const SidebarItemIcon = styled.span`
 export const SidebarItemDescription = styled.p<{ active: boolean }>`
     font-size: 16px;
     font-weight: 500;
-    color: ${props => (props.active ? props.theme.palette.primary.main : '#000')};
+    color: ${props => (props.active ? props.theme.palette.primary.main : '')};
 `
