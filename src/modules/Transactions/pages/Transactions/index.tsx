@@ -25,7 +25,7 @@ export default function Transactions() {
             <TransactionsTable>
                 <Table
                     data={transactions}
-                    Skeleton={<div>ds</div>}
+                    Skeleton={<div>Carregando transações</div>}
                     loading={loadingTransactions}
                     noDataMessage="Não há transações há serem exibidas"
                 >
