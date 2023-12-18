@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { getTransactions } from '../APIs/getTransactions'
 import { postTransaction } from '../APIs/postTransaction'
+import { putTransaction } from '../APIs/putTransaction'
 import { ITransaction } from '../interfaces/ITransaction'
 
 /*  Acredito que ficaria mais entendível em uma classe,
@@ -30,9 +31,31 @@ export const useTransactions = () => {
         try {
             setLoadingTransactions(true)
             const registeredTransaction = await postTransaction(transaction)
-            setTransactions(prevTransactions => prevTransactions.concat(registeredTransaction).sort(function (a, b) {
-                return new Date(b.date).getTime() - new Date(a.date).getTime()
-            }))
+            setTransactions(prevTransactions =>
+                prevTransactions.concat(registeredTransaction).sort(function (a, b) {
+                    return new Date(b.date).getTime() - new Date(a.date).getTime()
+                }),
+            )
+        } catch ({ response }) {
+            console.error(response)
+        } finally {
+            setLoadingTransactions(false)
+        }
+    }
+    const updateTransaction = async (transaction: Omit<ITransaction, 'id'>, id: number) => {
+        try {
+            setLoadingTransactions(true)
+            const updatedTransaction = await putTransaction(transaction, id)
+            setTransactions(prevTransactions =>
+                prevTransactions
+                    .map(prevTransaction => {
+                        if (prevTransaction.id === id) return updatedTransaction
+                        return prevTransaction
+                    })
+                    .sort(function (a, b) {
+                        return new Date(b.date).getTime() - new Date(a.date).getTime()
+                    }),
+            )
         } catch ({ response }) {
             console.error(response)
         } finally {
@@ -44,5 +67,5 @@ export const useTransactions = () => {
         getTransactionsData()
     }, [])
 
-    return { loadingTransactions, transactions, setTransaction }
+    return { loadingTransactions, transactions, setTransaction, updateTransaction }
 }

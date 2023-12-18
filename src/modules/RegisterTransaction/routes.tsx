@@ -1,6 +1,7 @@
 import { lazy } from 'react'
 
 import { IRoutes } from 'router/types'
+import { URIs } from 'router/URIs'
 
 const RegisterTransaction = lazy(() => import('./pages/RegisterTransaction'))
 
@@ -9,14 +10,14 @@ const TransactionRoutes: IRoutes = [
         name: 'RegisterTransaction',
         routeProps: {
             element: <RegisterTransaction />,
-            path: '/register-transaction',
+            path: URIs.RegisterTransaction,
         },
     },
     {
-        name: 'RegisterTransaction',
+        name: 'UpdateTransaction',
         routeProps: {
             element: <RegisterTransaction />,
-            path: '/update-transaction/:transactionId',
+            path: `${URIs.UpdateTransaction}/:transactionId`,
         },
     },
 ]

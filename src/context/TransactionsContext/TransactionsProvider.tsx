@@ -6,7 +6,7 @@ import { useTransactions } from './hooks/useTransactions'
 import { TransactionsContext } from '.'
 
 export const TransactionsProvider: FunctionComponent<PropsWithChildren> = ({ children }) => {
-    const { transactions, loadingTransactions, setTransaction } = useTransactions()
+    const { transactions, loadingTransactions, setTransaction, updateTransaction } = useTransactions()
     const { balance, formattedBalance, formattedExpenses, expenses, gains, formattedGains } = useCalculateBalance(transactions)
 
     return (
@@ -21,6 +21,7 @@ export const TransactionsProvider: FunctionComponent<PropsWithChildren> = ({ chi
                 gains,
                 formattedGains,
                 setTransaction,
+                updateTransaction,
             }}
         >
             {children}

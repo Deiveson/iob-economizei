@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom'
+
 import { useTransactionsContext } from 'context/TransactionsContext'
 
 import { Button } from 'components/atoms/Button'
@@ -5,11 +7,13 @@ import { PageTitle } from 'components/atoms/PageTitle'
 import { Columns, Table } from 'components/atoms/Table'
 import { DateColumn, CurrencyColumn } from 'components/atoms/Table'
 import { ValueViewer } from 'components/molecules/ValueViewer'
+import { URIs } from 'router/URIs'
 
 import { ResumeTitle, TransactionContainer, TransactionValueViewer, TransactionsTable } from './transactions.styles'
 
 export default function Transactions() {
     const { gains, expenses, transactions, loadingTransactions } = useTransactionsContext()
+    const navigate = useNavigate()
     return (
         <TransactionContainer>
             <PageTitle>Extrato</PageTitle>
@@ -32,7 +36,11 @@ export default function Transactions() {
                         render={({ description }) => <span>{description}</span>}
                     />
                     <CurrencyColumn dataAttribute={['value', 'type']} description="Valor" />
-                    <Columns dataAttribute="id" description="Editar" render={({ id }) => <Button>Editar</Button>} />
+                    <Columns
+                        dataAttribute="id"
+                        description="Editar"
+                        render={({ id }) => <Button onClick={() => navigate(`${URIs.UpdateTransaction}/${id}`)}>Editar</Button>}
+                    />
                 </Table>
             </TransactionsTable>
         </TransactionContainer>

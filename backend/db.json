@@ -1,25 +1,25 @@
 {
-    "extract": [
+    "transactions": [
         {
-            "id": 1,
-            "date": "2023-12-11",
-            "description": "Conta de água",
             "value": 45,
-            "type": "SPENT"
+            "description": "Conta de água",
+            "type": "SPENT",
+            "date": "2023-12-17",
+            "id": 1
         },
         {
-            "id": 2,
-            "date": "2023-12-11",
+            "value": 100,
             "description": "Conta de luz",
-            "value": 200,
-            "type": "SPENT"
+            "type": "SPENT",
+            "date": "2023-12-17",
+            "id": 2
         },
         {
-            "id": 3,
-            "date": "2023-12-11",
-            "description": "Gás de cozinha",
-            "value": 95,
-            "type": "SPENT"
+            "value": 1000,
+            "description": "Salário",
+            "type": "GAIN",
+            "date": "2023-12-17",
+            "id": 3
         }
     ]
 }
