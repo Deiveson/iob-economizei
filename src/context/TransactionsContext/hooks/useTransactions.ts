@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import {deleteTransaction} from "../APIs/deleteTransaction";
+import { deleteTransaction } from '../APIs/deleteTransaction'
 import { getTransactions } from '../APIs/getTransactions'
 import { postTransaction } from '../APIs/postTransaction'
 import { putTransaction } from '../APIs/putTransaction'

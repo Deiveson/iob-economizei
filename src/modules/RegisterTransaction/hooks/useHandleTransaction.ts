@@ -2,12 +2,11 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 import { TransactionsItemType, useTransactionsContext } from 'context/TransactionsContext'
+import { getTransaction } from 'context/TransactionsContext/APIs/getTransaction'
 
 import { URIs } from 'router/URIs'
 
 import { IRegisterTransaction } from './interfaces/IRegisterTransaction'
-
-import { getTransaction } from '../../../context/TransactionsContext/APIs/getTransaction'
 
 export const useHandleTransaction = () => {
     //No mundo real eu dividiria esta lógica, mas não tive muito tempo pra fazer este teste durante a semana
