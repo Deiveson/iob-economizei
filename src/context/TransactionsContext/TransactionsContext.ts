@@ -14,4 +14,5 @@ export const TransactionsContext = createContext<ITransactionsContext>({
     formattedExpenses: '',
     async setTransaction(transaction: Omit<ITransaction, 'id'>) {},
     async updateTransaction(transaction: Omit<ITransaction, 'id'>) {},
+    async removeTransaction(id) {},
 })

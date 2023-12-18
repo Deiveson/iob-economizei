@@ -12,7 +12,7 @@ import { URIs } from 'router/URIs'
 import { ResumeTitle, TransactionContainer, TransactionValueViewer, TransactionsTable } from './transactions.styles'
 
 export default function Transactions() {
-    const { gains, expenses, transactions, loadingTransactions } = useTransactionsContext()
+    const { gains, expenses, transactions, loadingTransactions, removeTransaction } = useTransactionsContext()
     const navigate = useNavigate()
     return (
         <TransactionContainer>
@@ -40,6 +40,11 @@ export default function Transactions() {
                         dataAttribute="id"
                         description="Editar"
                         render={({ id }) => <Button onClick={() => navigate(`${URIs.UpdateTransaction}/${id}`)}>Editar</Button>}
+                    />
+                    <Columns
+                        dataAttribute="id"
+                        description="Deletar"
+                        render={({ id }) => <Button onClick={() => removeTransaction(id)}>Deletar</Button>}
                     />
                 </Table>
             </TransactionsTable>

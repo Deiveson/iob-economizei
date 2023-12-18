@@ -11,4 +11,5 @@ export interface ITransactionsContext {
     formattedExpenses: string
     setTransaction(transaction: Omit<ITransaction, 'id'>): Promise<void>
     updateTransaction(transaction: Omit<ITransaction, 'id'>, id: number): Promise<void>
+    removeTransaction(id: number): Promise<void>
 }

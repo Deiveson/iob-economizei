@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 
+import {deleteTransaction} from "../APIs/deleteTransaction";
 import { getTransactions } from '../APIs/getTransactions'
 import { postTransaction } from '../APIs/postTransaction'
 import { putTransaction } from '../APIs/putTransaction'
@@ -62,10 +63,27 @@ export const useTransactions = () => {
             setLoadingTransactions(false)
         }
     }
+    const removeTransaction = async (id: number) => {
+        try {
+            setLoadingTransactions(true)
+            await deleteTransaction(id)
+            setTransactions(prevTransactions =>
+                prevTransactions
+                    .filter(prevTransaction => prevTransaction.id !== id)
+                    .sort(function (a, b) {
+                        return new Date(b.date).getTime() - new Date(a.date).getTime()
+                    }),
+            )
+        } catch ({ response }) {
+            console.error(response)
+        } finally {
+            setLoadingTransactions(false)
+        }
+    }
 
     useEffect(() => {
         getTransactionsData()
     }, [])
 
-    return { loadingTransactions, transactions, setTransaction, updateTransaction }
+    return { loadingTransactions, transactions, setTransaction, updateTransaction, removeTransaction }
 }

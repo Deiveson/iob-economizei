@@ -7,7 +7,7 @@ import { URIs } from 'router/URIs'
 
 import { IRegisterTransaction } from './interfaces/IRegisterTransaction'
 
-import { getTransaction } from '../APIs/getTransaction'
+import { getTransaction } from '../../../context/TransactionsContext/APIs/getTransaction'
 
 export const useHandleTransaction = () => {
     //No mundo real eu dividiria esta lógica, mas não tive muito tempo pra fazer este teste durante a semana
