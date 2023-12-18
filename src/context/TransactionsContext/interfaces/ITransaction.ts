@@ -1,9 +1,9 @@
-import { ExtractItemType } from '../extract.enums'
+import { TransactionsItemType } from '../transactions.enums'
 
 export interface ITransaction {
     id: number
     date: string
     description: string
     value: number
-    type: ExtractItemType
+    type: TransactionsItemType
 }

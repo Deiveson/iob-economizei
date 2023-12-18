@@ -6,7 +6,7 @@ import { themeAttributes } from 'theme/themeAttributes'
 import Sidebar from 'components/molecules/Sidebar'
 
 import { AppStyles } from './app.styles'
-import { ExtractProvider } from './context/ExtractContext'
+import { TransactionsProvider } from './context/TransactionsContext'
 import { Router } from './router'
 import GlobalStyle from './theme/globalstyle'
 
@@ -16,10 +16,10 @@ function App() {
             <ThemeProvider theme={themeAttributes}>
                 <GlobalStyle />
                 <AppStyles>
-                    <ExtractProvider>
+                    <TransactionsProvider>
                         <Sidebar />
                         <Router />
-                    </ExtractProvider>
+                    </TransactionsProvider>
                 </AppStyles>
             </ThemeProvider>
         </BrowserRouter>

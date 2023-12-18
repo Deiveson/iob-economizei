@@ -1,11 +1,11 @@
 import { createContext } from 'react'
 
-import { IExtractContext } from './interfaces/IExtractContext'
 import { ITransaction } from './interfaces/ITransaction'
+import { ITransactionsContext } from './interfaces/ITransactionsContext'
 
-export const ExtractContext = createContext<IExtractContext>({
-    extract: [],
-    loadingExtract: false,
+export const TransactionsContext = createContext<ITransactionsContext>({
+    transactions: [],
+    loadingTransactions: false,
     balance: 0,
     gains: 0,
     expenses: 0,

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import { useExtractContext } from 'context/ExtractContext'
+import { useTransactionsContext } from 'context/TransactionsContext'
 import { FaChevronRight, FaLandmark } from 'react-icons/fa6'
 
 import { ValueViewer } from 'components/molecules/ValueViewer'
@@ -16,7 +16,7 @@ import {
 } from './current-balance.styles'
 
 export const CurrentBalance = () => {
-    const { formattedBalance, gains, expenses } = useExtractContext()
+    const { formattedBalance, gains, expenses } = useTransactionsContext()
 
     return (
         <CurrentBalanceContainer>

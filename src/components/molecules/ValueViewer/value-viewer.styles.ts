@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-export const ValueViewerContainer = styled.div`
+export const ValueViewerContainer = styled.span`
     display: grid;
     grid-template:
         'icon currency' 1fr

@@ -4,7 +4,7 @@ import { IRoutes } from 'router/types'
 
 const RegisterTransaction = lazy(() => import('./pages/RegisterTransaction'))
 
-const LoginRoutes: IRoutes = [
+const TransactionRoutes: IRoutes = [
     {
         name: 'RegisterTransaction',
         routeProps: {
@@ -12,6 +12,13 @@ const LoginRoutes: IRoutes = [
             path: '/register-transaction',
         },
     },
+    {
+        name: 'RegisterTransaction',
+        routeProps: {
+            element: <RegisterTransaction />,
+            path: '/update-transaction/:transactionId',
+        },
+    },
 ]
 
-export default LoginRoutes
+export default TransactionRoutes

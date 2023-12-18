@@ -1,4 +1,4 @@
-export enum ExtractItemType {
+export enum TransactionsItemType {
     EXPENSE = 'EXPENSE',
     GAIN = 'GAIN',
 }

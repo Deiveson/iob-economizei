@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react'
 
 import { useCurrency } from 'hooks/useCurrency'
 
-import { ExtractItemType } from '../extract.enums'
 import { ITransaction } from '../interfaces/ITransaction'
+import { TransactionsItemType } from '../transactions.enums'
 
-export const useCalculateBalance = (extract: Array<ITransaction>) => {
+export const useCalculateBalance = (transactions: Array<ITransaction>) => {
     const [balance, setBalance] = useState<number>(0)
     const [gains, setGains] = useState<number>(0)
     const [expenses, setExpenses] = useState<number>(0)
@@ -18,16 +18,16 @@ export const useCalculateBalance = (extract: Array<ITransaction>) => {
         setBalance(0)
         setGains(0)
         setExpenses(0)
-        extract.forEach(extractItem => {
-            if (extractItem.type === ExtractItemType.GAIN) {
-                setBalance(prevState => prevState + extractItem.value)
-                setGains(prevState => prevState + extractItem.value)
+        transactions.forEach(transaction => {
+            if (transaction.type === TransactionsItemType.GAIN) {
+                setBalance(prevState => prevState + transaction.value)
+                setGains(prevState => prevState + transaction.value)
             } else {
-                setBalance(prevState => prevState - extractItem.value)
-                setExpenses(prevState => prevState - extractItem.value)
+                setBalance(prevState => prevState - transaction.value)
+                setExpenses(prevState => prevState - transaction.value)
             }
         })
-    }, [extract])
+    }, [transactions])
 
     return { balance, gains, expenses, formattedBalance, formattedGains, formattedExpenses }
 }

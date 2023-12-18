@@ -1,8 +1,8 @@
 import { ITransaction } from './ITransaction'
 
-export interface IExtractContext {
-    extract: Array<ITransaction>
-    loadingExtract: boolean
+export interface ITransactionsContext {
+    transactions: Array<ITransaction>
+    loadingTransactions: boolean
     balance: number
     gains: number
     expenses: number

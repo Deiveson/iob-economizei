@@ -1,16 +1,16 @@
-import React, {FunctionComponent, useCallback, useState} from 'react'
+import React, { FunctionComponent, useCallback, useState } from 'react'
 
-import {ITab} from "./interface/ITab";
+import { ITab } from './interface/ITab'
 import { TabContainer } from './tabs.styles'
 
-export const Tab: FunctionComponent<ITab> = ({ children, onTabSelected , defaultActive }) => {
+export const Tab: FunctionComponent<ITab> = ({ children, onTabSelected, defaultActive }) => {
     const [itemId, setItemId] = useState(defaultActive)
 
     const selected = useCallback((value: any) => value === itemId, [itemId])
 
     return (
         <TabContainer>
-            {React.Children.map(children, (child) => {
+            {React.Children.map(children, child => {
                 return React.cloneElement(child, {
                     onClick: () => {
                         setItemId(child.props.value)
